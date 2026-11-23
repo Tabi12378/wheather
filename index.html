@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Navbar -->
+        <header class="navbar">
+            <h1>
+                <i class="fa-solid fa-cloud-sun"></i>
+                Weather Dashboard
+            </h1>
+
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2>Check Weather</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter city name..."
+                    aria-label="City name">
+
+                <button id="search-btn">
+                    <i class="fa-solid fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading Message -->
+        <div id="loading" class="loading hidden">
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error hidden">
+            <p>Unable to find weather information.</p>
+        </div>
+
+        <!-- Current Weather -->
+        <section class="current-weather" id="current-weather">
+
+            <div class="weather-info">
+                <h2 id="city-name">City Name</h2>
+                <p id="date">Date</p>
+
+                <div class="temperature">
+                    <img id="weather-icon" src="" alt="Weather condition">
+                    <h1 id="temperature">--°C</h1>
+                </div>
+
+                <p id="weather-description">Weather condition</p>
+            </div>
+
+            <!-- Weather Details -->
+            <div class="weather-details">
+
+                <div class="detail">
+                    <i class="fa-solid fa-droplet"></i>
+                    <p>Humidity</p>
+                    <h3 id="humidity">--%</h3>
+                </div>
+
+                <div class="detail">
+                    <i class="fa-solid fa-wind"></i>
+                    <p>Wind Speed</p>
+                    <h3 id="wind-speed">-- km/h</h3>
+                </div>
+
+                <div class="detail">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <p>Feels Like</p>
+                    <h3 id="feels-like">--°C</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5 Day Forecast -->
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+
+            <div class="forecast-container" id="forecast-container">
+
+                <!-- Forecast cards will be created using JavaScript -->
+
+            </div>
+        </section>
+
+        <!-- Recent Searches -->
+        <section class="recent-section">
+            <h2>Recent Searches</h2>
+
+            <div id="recent-searches" class="recent-searches">
+
+                <!-- Recent cities will be added using JavaScript -->
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

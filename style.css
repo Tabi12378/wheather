@@ -1,0 +1,447 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================
+   2. Global Styling
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+/* =========================
+   3. Navbar
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar h1 i {
+    color: #ffd166;
+    margin-right: 8px;
+}
+
+#theme-toggle {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(20deg);
+}
+
+
+/* =========================
+   4. Search Section
+========================= */
+
+.search-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.search-section h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #fff;
+    color: #333;
+}
+
+.search-box button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    background: #ffd166;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #ffb703;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   5. Current Weather
+========================= */
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 35px;
+}
+
+.weather-info {
+    flex: 1;
+}
+
+.weather-info h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.weather-info > p {
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.temperature img {
+    width: 90px;
+    height: 90px;
+}
+
+.temperature h1 {
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.detail {
+    min-width: 120px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.detail i {
+    font-size: 25px;
+    color: #ffd166;
+    margin-bottom: 10px;
+}
+
+.detail p {
+    font-size: 13px;
+    color: #eee;
+}
+
+.detail h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   6. Forecast Section
+========================= */
+
+.forecast-section {
+    margin-bottom: 35px;
+}
+
+.forecast-section h2,
+.recent-section h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.forecast-card {
+    text-align: center;
+    padding: 22px 12px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.forecast-card img {
+    width: 65px;
+    height: 65px;
+    margin: 10px 0;
+}
+
+.forecast-card h3 {
+    font-size: 15px;
+}
+
+.forecast-card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   7. Recent Searches
+========================= */
+
+.recent-section {
+    margin-bottom: 30px;
+}
+
+.recent-searches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.recent-city {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.recent-city:hover {
+    background: #ffd166;
+    color: #333;
+    
+}
+
+
+/* =========================
+   8. Loading & Error
+========================= */
+
+.loading,
+.error {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.loading {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.error {
+    background: rgba(255, 70, 70, 0.3);
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   9. Dark Mode
+========================= */
+
+body.dark-mode {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+}
+
+body.dark-mode .current-weather,
+body.dark-mode .forecast-card,
+body.dark-mode .detail,
+body.dark-mode .recent-city {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .search-box input {
+    background: #263449;
+    color: white;
+}
+
+body.dark-mode .forecast-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+#forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background: white;
+    color: cornflowerblue;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-card img {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    #forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #forecast-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   10. Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+    .current-weather {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .weather-details {
+        width: 100%;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        padding: 20px 0;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .current-weather {
+        padding: 22px;
+    }
+
+    .weather-info h2 {
+        font-size: 24px;
+    }
+
+    .temperature h1 {
+        font-size: 42px;
+    }
+
+    .temperature img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .weather-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        min-width: 0;
+        padding: 15px 8px;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
